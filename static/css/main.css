@@ -58,6 +58,11 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.dropdown-item{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
 .card_sig_model {
     border: 1px solid #7F7F7F !important;
     border-radius: 5px !important;
