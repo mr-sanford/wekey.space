@@ -151,7 +151,7 @@ footer {
   z-index: 9999;
   position: fixed; /* фиксированная позиция */
   background-color: #0D6EFD; /* цвет заднего фона */
-  right: 20px; /* расстояние от правого края */
+  left: 20px; /* расстояние от правого края */
   bottom: -1px; /* расстояние от нижнего края */
   border-top-left-radius: 8px; /* скругление верхнего левого угла */
   border-top-right-radius: 8px; /* скругление верхнего правого угла */
