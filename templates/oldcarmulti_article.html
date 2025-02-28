@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{oldcarmulti_article[0].header}}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>Инструкция {{oldcarmulti_article[0].header}}</h1>
+    {{oldcarmulti_article[0].article | safe}}
+</div>
+{% endblock %}

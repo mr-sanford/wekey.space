@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru" data-bs-theme="light">
+<head>
+    <script src="{{ url_for('static', filename='js/color-modes.js') }}"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16
+        .png') }}"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/wkicons.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/baguettebox.js@1.12.0/dist/baguetteBox.min.css" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<div class="btn-up btn-up_hide"></div>
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </symbol>
+</svg>
+
+<main>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark my_navbar">
+        <div class="container">
+            <img class="" width="40" src="/static/images/logo_white.svg" alt="">
+            <a class="navbar-brand" style="margin-left: 10px; font-family: 'Saira_SemiCondensed-Regular';"
+               href="https://wekey.space">WeKey</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0 navbarmy">
+                    <li class="nav-item dropdown" data-bs-theme="light">
+                        <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
+                           aria-expanded="false" href="">Сигнализации </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/OldCarMulti">OldCarMulti</a></li>
+                            <li><a class="dropdown-item" href="/ucar">UCAR v2</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            {% for el in sig_name %}
+                                <li><a class="dropdown-item" href="/sig/{{ el.cat }}">{{ el.cat }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="nav-item py-1 py-lg-1 col-12 col-lg-auto">
+                        <div class="vr d-none d-lg-flex h-100 mx-lg-1 text-white"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/carkey">Автоключи</a>
+                    </li>
+                    <li class="nav-item py-1 py-lg-1 col-12 col-lg-auto">
+                        <div class="vr d-none d-lg-flex h-100 mx-lg-1 text-white"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-nowrap" aria-current="page" href="/gateway">Пульты для ворот</a>
+                    </li>
+                    <li class="nav-item py-1 py-lg-1 col-12 col-lg-auto">
+                        <div class="vr d-none d-lg-flex h-100 mx-lg-1 text-white"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-nowrap" href="/notes">Полезные заметки</a>
+                    </li>
+                </ul>
+
+                <hr class="d-lg-none text-white-50 my_hr_navbar">
+
+                <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-link nav-link py-1 px-0 px-lg-1 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false"
+                                data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (dark)">
+                            <svg class="bi my-1 theme-icon-active">
+                                <use href="#moon-stars-fill"></use>
+                            </svg>
+                            <span class="d-lg-none ms-1" id="bd-theme-text">Тема&nbsp;</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                            <li>
+                                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <svg class="bi me-2 opacity-50 theme-icon">
+                                        <use href="#sun-fill"></use>
+                                    </svg>
+                                    Светлая
+                                    <svg class="bi ms-auto d-none">
+                                        <use href="#check2"></use>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="true">
+                                    <svg class="bi me-2 opacity-50 theme-icon">
+                                        <use href="#moon-stars-fill"></use>
+                                    </svg>
+                                    Тёмная
+                                    <svg class="bi ms-auto d-none">
+                                        <use href="#check2"></use>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <svg class="bi me-2 opacity-50 theme-icon">
+                                        <use href="#circle-half"></use>
+                                    </svg>
+                                    Авто
+                                    <svg class="bi ms-auto d-none">
+                                        <use href="#check2"></use>
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    {% block body %}{% endblock %}
+</main>
+<footer class="container pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+        <div class="col-12 col-md">
+            <img class="mb-2" src="/static/images/logo_black.svg" alt="" width="40">
+            <small class="d-block mb-3 text-body-secondary">&copy; 2024 - {{ today_year }}</small>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Сигнализации</h5>
+            <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://piti.ru/">Сайт <strong>SHERIFF</strong></a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.starline.ru/">Сайт <strong>StarLine</strong></a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.scher-khan.ru/">Сайт <strong>Scher-Khan</strong></a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://tomahawk.ru/">Сайт <strong>TOMAHAWK</strong></a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://cenmax.ru/">Сайт <strong>CENMAX</strong></a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://alarmtrade.ru/">Сайт <strong>PANDORA</strong></a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Полезные ссылки</h5>
+            <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://prime-pult.ru/">Prime Pult</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.teh-primepult.ru/index/oldcarmulti/0-726">OldCarMulti</a></li>
+            </ul>
+        </div>
+{#        <div class="col-6 col-md">#}
+{#            <h5>About</h5>#}
+{#            <ul class="list-unstyled text-small">#}
+{#                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>#}
+{#                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>#}
+{#                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>#}
+{#                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>#}
+{#            </ul>#}
+{#        </div>#}
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/baguettebox.js@1.12.0/dist/baguetteBox.min.js"></script>
+<script>
+    window.addEventListener('load', function () {
+        baguetteBox.run('.gallery', {
+
+        });
+    });
+</script>
+<script src="{{ url_for('static', filename='js/upscroll.js') }}"></script>
+</body>
+</html>

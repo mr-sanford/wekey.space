@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{notes_articleview[0].header}}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>{{notes_articleview[0].header}}</h1>
+    {{notes_articleview[0].article | safe}}
+</div>
+{% endblock %}

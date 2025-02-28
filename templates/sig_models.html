@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{sig_models[0].cat}}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <div class="row g-2 row-cols-1 row-cols-md-2 row-cols-lg-3">
+        {% for el in sig_models %}
+            <div class="col">
+                <a class="btn d-flex align-items-center justify-content-between card_sig_model" href="/sig/{{ sig_models[0].cat }}/{{ el.subcat }}">
+                    <div style="font-size: 1.2rem;">{{ sig_models[0].cat }} {{ el.subcat }}</div>
+                    <div style="height: 55px;"><img src="/static/article/sig/{{ sig_models[0].cat }}/{{ el.subcat }}/{{ sig_models[0].cat }}_{{ el.subcat }}.jpg" height="55" alt="" style="border-radius: 5px;"></div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

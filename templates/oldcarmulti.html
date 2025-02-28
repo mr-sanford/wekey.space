@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{oldcarmulti_models[0].part}}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>Настройка пульта OldCarMulti</h1>
+    <ol type="1">
+        <li>Одновременно нажмите и удерживайте кнопки [A], [B], [D]</li>
+        <li>Сразу и в течение 3 секунд световой индикатор не должен загореться. Если он загорелся - повторите
+            попытку
+        </li>
+        <li>Через 3 секунды световой индикатор выдаст короткую вспышку</li>
+        <li>Отпустите кнопки [B] и [D], продолжая удерживать [А], затем количеством нажатий кнопки [В]
+            введите ДЕСЯТКИ номера профиля, а количеством нажатий кнопки [С] или [D] введите ЕДИНИЦЫ
+            номера профиля
+        </li>
+        <li>Отпустите все кнопки, нужный профиль активирован</li>
+    </ol>
+    <p><strong>Пульты с одинаковым профилем полностью взаимозаменяемы.</strong></p>
+    <div class="accordion accordion_mb" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed my_accordion_button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                        aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseOne">
+                    Примечание *
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <p>Если у номера профиля указан значок звездочки <strong>*</strong> – значит в системе есть только единственный экземпляр кода оригинального пульта для имитации
+                        сигнала. Это значит, что если взять два пульта "OldCarMulti" и попытаться прописать их в одну автосигнализацию, то пульты будут конфликтовать между собой
+                        (возможно работать "в догонялки"), т.к. технически пульты будут полными клонами.</p>
+                    <p>Так же если прописать один из таких пультов в автосигнализацию, то активированный на этот профиль второй такой же пульт тоже будет являться полным клоном и
+                        может стать работоспособным. При наличии нескольких профилей и необходимости доукомплектовать автомобиль двумя пультами – активируйте два разных
+                        профиля.</p>
+                    <p>При отсутствии у номера профиля значка звездочки <strong>*</strong> – вышеуказанной проблемы нет, т.к. в системе есть более нескольких десятков тысяч
+                        экземпляров кода оригинального пульта для имитации сигнала.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="button_head d-grid gap-2 d-md-block mb-4 mt-3">
+        <a class="btn btn-primary btn" type="button" href="/static/article/OldCarMulti/OldCarMulti.pdf">Скачать инструкцию OldCarMulti</a>
+        {% for el in oldcarmulti_models_uniq %}
+            <a class="btn btn-success btn" type="button" href="#scroll_{{ el.cat }}">{{ el.cat }}</a>
+        {% endfor %}
+    </div>
+
+    <div class="row g-2 row-cols-1 row-cols-md-2 row-cols-lg-3" >
+        {% for el in oldcarmulti_models %}
+            <div class="col col_my" id="scroll_{{ el.cat }}">
+                <div class="card card_my h-100">
+                    <div class="card_div_img"><img src="/static/article/OldCarMulti/{{ el.cat }}/{{ el.subcat }}/{{ el.cat }}_{{ el.subcat }}.jpg" alt=""></div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ el.header }}</h5>
+                        {{ el.card | safe}}
+                        <div class="div_card_btn"><a href="/OldCarMulti/{{ el.cat }}/{{ el.subcat }}" class="btn btn-primary btn-lg card_my_btn">Подробнее</a></div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

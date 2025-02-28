@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'wkicons';
+  src:  url('../fonts/icons/wkicons.eot?wjunby');
+  src:  url('../fonts/icons/wkicons.eot?wjunby#iefix') format('embedded-opentype'),
+    url('../fonts/icons/wkicons.ttf?wjunby') format('truetype'),
+    url('../fonts/icons/wkicons.woff?wjunby') format('woff'),
+    url('../fonts/icons/wkicons.svg?wjunby#wkicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.wk {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'wkicons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wk-ch2:before {
+  content: "\e900";
+}
+.wk-ch3:before {
+  content: "\e901";
+}
+.wk-ch-prog:before {
+  content: "\e902";
+}
+.wk-d:before {
+  content: "\e903";
+}
+.wk-dd:before {
+  content: "\e904";
+}
+.wk-ddd:before {
+  content: "\e905";
+}
+.wk-dddd:before {
+  content: "\e906";
+}
+.wk-dot:before {
+  content: "\e907";
+}
+.wk-f:before {
+  content: "\e908";
+}
+.wk-i:before {
+  content: "\e909";
+}
+.wk-ii:before {
+  content: "\e90a";
+}
+.wk-iii:before {
+  content: "\e90b";
+}
+.wk-iv:before {
+  content: "\e90c";
+}
+.wk-key:before {
+  content: "\e90d";
+}
+.wk-lock:before {
+  content: "\e90e";
+}
+.wk-loud:before {
+  content: "\e90f";
+}
+.wk-mute:before {
+  content: "\e910";
+}
+.wk-one-hor:before {
+  content: "\e911";
+}
+.wk-prog:before {
+  content: "\e912";
+}
+.wk-quest:before {
+  content: "\e913";
+}
+.wk-star:before {
+  content: "\e914";
+}
+.wk-t:before {
+  content: "\e915";
+}
+.wk-thunder:before {
+  content: "\e916";
+}
+.wk-treangle-down:before {
+  content: "\e917";
+}
+.wk-treangle-left:before {
+  content: "\e918";
+}
+.wk-treangle-right:before {
+  content: "\e919";
+}
+.wk-treangle-up:before {
+  content: "\e91a";
+}
+.wk-trunk:before {
+  content: "\e91b";
+}
+.wk-two-hor:before {
+  content: "\e91c";
+}
+.wk-unlock:before {
+  content: "\e91d";
+}

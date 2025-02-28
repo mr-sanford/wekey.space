@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{sig_article[0].cat}} {{sig_article[0].subcat}}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>Инструкция {{sig_article[0].cat}} {{sig_article[0].subcat}}</h1>
+    {{sig_article[0].article | safe}}
+</div>
+{% endblock %}
