@@ -25,6 +25,16 @@ footer {
     }
 }
 
+body {
+    font-size: 1.1rem !important;
+}
+.dropdown-menu {
+     font-size: 1.1rem !important;
+}
+.btn {
+    font-size: 1.1rem !important;
+}
+
 .bi {
     width: 1em;
     height: 1em;
