@@ -31,6 +31,7 @@ body {
 .dropdown-menu {
      font-size: 1.1rem !important;
 }
+
 .btn {
     font-size: 1.1rem !important;
 }
@@ -68,10 +69,14 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.dropdown-item{
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-}
+/*.dropdown-item{*/
+/*    padding-top: 10px !important;*/
+/*    padding-bottom: 10px !important;*/
+/*    transition: all 0.2s ease !important;*/
+/*}*/
+/*.dropdown-item:active{*/
+/*    background: #BB2D3B !important;*/
+/*}*/
 
 .card_sig_model {
     border: 1px solid #7F7F7F !important;

@@ -48,12 +48,14 @@ def sig_model(name, model):  # put application's code here
     return render_template('sig_article.html', sig_article=sig_article)
 
 @app.route('/OldCarMulti')
+@app.route('/oldcarmulti')
 def OldCarMulti():  # put application's code here
     oldcarmulti_models = db.session.query(Record).filter_by(part="OldCarMulti").order_by(Record.type_sort)
     oldcarmulti_models_uniq = db.session.query(Record.cat).filter_by(part="OldCarMulti").order_by(Record.cat).distinct()
     return render_template('oldcarmulti.html', oldcarmulti_models=oldcarmulti_models, oldcarmulti_models_uniq=oldcarmulti_models_uniq)
 
 @app.route('/OldCarMulti/<string:name>/<string:model>')
+@app.route('/oldcarmulti/<string:name>/<string:model>')
 def OldCarMulti_model(name, model):  # put application's code here
     oldcarmulti_article = db.session.query(Record).filter_by(cat=name, subcat=model, part='OldCarMulti')
     return render_template('oldcarmulti_article.html', oldcarmulti_article=oldcarmulti_article)
