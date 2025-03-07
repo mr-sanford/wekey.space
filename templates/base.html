@@ -175,18 +175,18 @@
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/baguettebox.js@1.12.0/dist/baguetteBox.min.js"></script>
 
-{#<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>#}
-{#<script>#}
-{#    // Add slideDown animation to Bootstrap dropdown when expanding.#}
-{#  $('.dropdown').on('show.bs.dropdown', function() {#}
-{#    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();#}
-{#  });#}
-{##}
-{#  // Add slideUp animation to Bootstrap dropdown when collapsing.#}
-{#  $('.dropdown').on('hide.bs.dropdown', function() {#}
-{#    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();#}
-{#  });#}
-{#</script>#}
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+    // Add slideDown animation to Bootstrap dropdown when expanding.
+  $('.dropdown').on('show.bs.dropdown', function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  });
+
+  // Add slideUp animation to Bootstrap dropdown when collapsing.
+  $('.dropdown').on('hide.bs.dropdown', function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+  });
+</script>
 
 <script>
     window.addEventListener('load', function () {
