@@ -1,33 +1,20 @@
-name: Flask CI/CD Pipeline
-
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+name: remote ssh command
+on: [push]
 jobs:
-  deploy:
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.11'
-    - name: Install Dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: Deploy to VPS
-      uses: mr-sanford/wekey.space@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        script: |
-          cd /wekey
-          git pull
-          pip install -r requirements.txt
-          sudo systemctl restart nginx
-          sudo systemctl restart gunicorn
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.2.1
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd wekey
+            git pull
+#            pip install -r requirements.txt
+#            sudo systemctl restart nginx
+#            sudo systemctl restart gunicorn
