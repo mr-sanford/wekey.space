@@ -26,14 +26,28 @@ footer {
 }
 
 body {
-    font-size: 1.1rem !important;
+    font-size: 1.2rem !important;
 }
+
+.navbar-brand {
+    font-size: 1.5rem !important;
+}
+
 .dropdown-menu {
-     font-size: 1.1rem !important;
+    font-size: 1.2rem !important;
+}
+
+/*.dropdown-menu[data-bs-popper] {*/
+/*  top: calc(100% + var(--#{$prefix}dropdown-spacer));*/
+/*  margin-top: 0;*/
+/*}*/
+
+.dropdown-menu.show{
+    margin-top: 0 !important;
 }
 
 .btn {
-    font-size: 1.1rem !important;
+    font-size: 1.2rem !important;
 }
 
 .bi {
@@ -68,15 +82,6 @@ body {
 .my_navbar {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-/*.dropdown-item{*/
-/*    padding-top: 10px !important;*/
-/*    padding-bottom: 10px !important;*/
-/*    transition: all 0.2s ease !important;*/
-/*}*/
-/*.dropdown-item:active{*/
-/*    background: #BB2D3B !important;*/
-/*}*/
 
 .card_sig_model {
     border: 1px solid #7F7F7F !important;
@@ -226,3 +231,22 @@ body {
     border-width: 0;
     outline-width: 0;
 }
+
+
+/*.slideIn {*/
+/*    -webkit-animation-name: slideIn;*/
+/*    animation-name: slideIn;*/
+/*    animation-duration: 0.8s;*/
+/*    animation-fill-mode: both;*/
+/*}*/
+
+/*@keyframes slideIn {*/
+/*    0% {*/
+/*        transform: translateY(1rem);*/
+/*        opacity: 0;*/
+/*    }*/
+/*    100% {*/
+/*        transform: translateY(0rem);*/
+/*        opacity: 1;*/
+/*    }*/
+/*}*/
